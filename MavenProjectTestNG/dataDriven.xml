@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<test name="correctuserpass">
+		<parameter name="username" value="Admin"></parameter>
+		<parameter name="password" value="admin123"></parameter>
+		<classes>
+			<class name="com.dataDriven.CorrectUserPass" />
+		</classes>
+	</test>
+
+	<test name="correctUserwrongpass">
+		<parameter name="username" value="Admin"></parameter>
+		<parameter name="password" value="admin123gtg"></parameter>
+		<classes>
+			<class name="com.dataDriven.correctUser_WrongPass"></class>
+		</classes>
+	</test>
+
+	<test name="WrongUser">
+		<parameter name="username" value="Admina4ar"></parameter>
+		<parameter name="password" value="admin123"></parameter>
+		<classes>
+			<class name="com.dataDriven.WrongUser_CorrectPass"></class>
+		</classes>
+	</test>
+
+	<test name="BothWrong"></test>
+	<parameter name="username" value="Admin1234"></parameter>
+	<parameter name="password" value="admin12354"></parameter>
+	<classes>
+		<class name="com.dataDriven.BothWrong"></class>
+	</classes>
+	</test>
+</suite>
